@@ -7,10 +7,9 @@ services:
     restart: unless-stopped
     environment:
       - TZ=America/Bogota
+      - PUID=1003
+      - PGID=1003
     network_mode: host
-    environment:
-        - PUID=1003
-        - PGID=1003
     volumes:
       - ~/plex/database:/config
       - ~/plex/transcode/temp:/transcode
